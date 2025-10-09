@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>DevOps Java WebApp</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Servlet App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 { color: #333; }
+        form {
+            background-color: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-<body style="background-color:#66ff99;text-align:center">
-<h1>This is a Sample Java Web for group 24!!!!!!!!!!!!!!!!</h1>
-<h2>welcomeguys!!!!!!!!!!!!!!!</h1>
+<body>
+    <h1>Welcome to the MultiCloud Deployment Portal</h1>
+    <form action="hello" method="post">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username" name="username" placeholder="Your name" required>
+        <input type="submit" value="Submit">
+    </form>
 </body>
 </html>
