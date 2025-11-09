@@ -1,12 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>DevOps Java WebApp</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Counter - DevOps Java App</title>
 
+  <style>
+    /* ===== Page Layout ===== */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* ===== Main Container ===== */
+    .container {
+      background: #ffffff;
+      width: 400px;
+      border-radius: 16px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 25px 30px;
+      text-align: center;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Header ===== */
+    h1 {
+      color: #4e54c8;
+      margin-bottom: 15px;
+    }
+
+    p.description {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    /* ===== Textarea ===== */
+    textarea {
+      width: 100%;
+      height: 120px;
+      resize: none;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+      transition: 0.2s;
+    }
+
+    textarea:focus {
+      border-color: #4e54c8;
+      box-shadow: 0 0 6px rgba(78, 84, 200, 0.4);
+    }
+
+    /* ===== Button ===== */
+    button {
+      margin-top: 15px;
+      padding: 10px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(78, 84, 200, 0.4);
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .footer a {
+      color: #4e54c8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<body style="background-color:#66ff99;text-align:center">
-<h1>This is a Sample Java Web for group 24!!!!!!!!!!!!!!!!</h1>
-<h2>welcomeguys!!!!!!!!!!!!!!!</h1>
+
+<body>
+  <div class="container">
+    <h1>🧮 Word Counter</h1>
+    <p class="description">Enter your text below to count words, numbers, and spaces.</p>
+
+    <form action="wordcount" method="post">
+      <textarea name="text" placeholder="Type or paste your text here..."></textarea>
+      <br />
+      <button type="submit">Count Now</button>
+    </form>
+
+    <div class="footer">
+      <p>Made with 💙 by <strong>Ayush Raj</strong> | Group 24</p>
+      <a href="hello">Test Hello Servlet</a>
+    </div>
+  </div>
 </body>
 </html>
